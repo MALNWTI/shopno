@@ -1,0 +1,109 @@
+//Появлення меню та заміна бургера на стрілку
+function role(d) {
+  nav = document.getElementById("nav_main");
+  burg = document.getElementById("burger");
+  if (nav.className == "navigation_off") {
+    nav.className = "navigation_on";
+    burg.className = "fas fa-angle-down";
+  }
+  else {
+    nav.className = "navigation_off";
+    burg.className = "fa fa-bars";
+  }
+}
+
+//вибірка в About Us
+var links = new Array(
+  "img/about_1.png",
+  "img/about_2.png",
+  "img/about_3.png",
+  "img/about_4.png"
+);
+
+function nav(i) {
+  li0 = document.getElementById("li0");
+  li1 = document.getElementById("li1");
+  li2 = document.getElementById("li2");
+  li3 = document.getElementById("li3");
+  element = document.getElementById("img_about");
+  element.src = links[i];
+  if ("li"+[i]=="li0") {
+    li0.className = "li_on";
+    li1.className = "about_li";
+    li2.className = "about_li";
+    li3.className = "about_li";
+  }
+  if ("li"+[i]=="li1") {
+    li1.className = "li_on";
+    li0.className = "about_li";
+    li2.className = "about_li";
+    li3.className = "about_li";
+  }
+  if ("li"+[i]=="li2") {
+    li2.className = "li_on";
+    li1.className = "about_li";
+    li0.className = "about_li";
+    li3.className = "about_li";
+  }
+  if ("li"+[i]=="li3") {
+    li3.className = "li_on";
+    li1.className = "about_li";
+    li2.className = "about_li";
+    li0.className = "about_li";
+  }
+
+}
+
+//ефект в our_services (отримуємо номер улемента з яким працюватимемо, і просто класи заміняємо на вже підготовлені)
+function worka(j){
+  elementsecond = document.getElementById("second"+[j]);
+  elementthird = document.getElementById("third"+[j]);
+  elementaopen = document.getElementById("aopen"+[j]);
+  elementclose = document.getElementById("aclose"+[j]);
+
+  if (elementsecond.className == "second") {
+    elementsecond.className = "second2";
+    elementthird.className = "third2";
+    elementaopen.className = "workclose";
+    elementclose.className = "worka";
+  }
+  else {
+    elementsecond.className = "second";
+    elementthird.className = "third";
+    elementaopen.className = "worka";
+    elementclose.className = "workclose";
+  }
+}
+
+//вибірка в wrap_review
+var name_re = new Array(
+  "AL RAYHAN <i>/ UI/UX DESIGNER</i>",
+  "JON TRAVOLTA <i>/ UI/UX DESIGNER</i>",
+  "NINA IV <i>/ Recrutier </i>",
+  "Holy Michaels <i>/ SECRETARy"
+);
+k=0;
+var img_re = new Array(
+  "img/team_2.png",
+  "img/team_3.png",
+  "img/team_4.png",
+  "img/team_0.png"
+);
+var lor_re = new Array(
+  "Lorem Ipsum is simply dummy text of the printing and you standard dummy know that text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis hic, similique asperiores explicabo, itaque sequi excepturi possimus aliquam cum delectus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, pariatur.",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, autem illum eaque! Illo fugit quas fuga non, voluptas architecto, deserunt.ossimus aliquam cum delectus.Lorem ipsum dolor sit amet",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda veritatis ad accusamus magni iusto. Molestiae facilis possimus ullam nam nihil deserunt ipsam, nostrum, dignissimos quibusdam, praesentium ad aperiam nobis atque."
+);
+
+function review(k){
+  name_rew = document.getElementById('name_rew');
+  img_rew = document.getElementById('img_review');
+  descr_text = document.getElementById('description_text');
+  sta_text = document.getElementById('star_text');
+  name_rew.innerHTML = name_re[k];
+  img_rew.src = img_re[k];
+  descr_text.innerHTML = lor_re[k];
+}
+
+//Якорь, треба буде переробити, element.scrollIntoView({ behavior: 'smooth' }) - про це почитати потім
