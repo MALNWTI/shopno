@@ -20,38 +20,38 @@ var links = new Array(
   "img/about_4.png"
 );
 
-function nav(i) {
+function nav(it) {
   li0 = document.getElementById("li0");
   li1 = document.getElementById("li1");
   li2 = document.getElementById("li2");
   li3 = document.getElementById("li3");
   element = document.getElementById("img_about");
-  element.src = links[i];
-  if ("li"+[i]=="li0") {
+  element.src = links[it];
+
+  if ("li"+[it]=="li0") {
     li0.className = "li_on";
     li1.className = "about_li";
     li2.className = "about_li";
     li3.className = "about_li";
   }
-  if ("li"+[i]=="li1") {
+  if ("li"+[it]=="li1") {
     li1.className = "li_on";
     li0.className = "about_li";
     li2.className = "about_li";
     li3.className = "about_li";
   }
-  if ("li"+[i]=="li2") {
+  if ("li"+[it]=="li2") {
     li2.className = "li_on";
     li1.className = "about_li";
     li0.className = "about_li";
     li3.className = "about_li";
   }
-  if ("li"+[i]=="li3") {
+  if ("li"+[it]=="li3") {
     li3.className = "li_on";
     li1.className = "about_li";
     li2.className = "about_li";
     li0.className = "about_li";
   }
-
 }
 
 //ефект в our_services (отримуємо номер улемента з яким працюватимемо, і просто класи заміняємо на вже підготовлені)
@@ -82,7 +82,6 @@ var name_re = new Array(
   "NINA IV <i>/ Recrutier </i>",
   "Holy Michaels <i>/ SECRETARy"
 );
-k=0;
 var img_re = new Array(
   "img/team_2.png",
   "img/team_3.png",
@@ -101,9 +100,45 @@ function review(k){
   img_rew = document.getElementById('img_review');
   descr_text = document.getElementById('description_text');
   sta_text = document.getElementById('star_text');
+  nav_li0 = document.getElementById("media_nav_li0");
+  nav_li1 = document.getElementById("media_nav_li1");
+  nav_li2 = document.getElementById("media_nav_li2");
+  nav_li3 = document.getElementById("media_nav_li3");
   name_rew.innerHTML = name_re[k];
   img_rew.src = img_re[k];
   descr_text.innerHTML = lor_re[k];
+
+  if ("li"+[k]=="li0") {
+    nav_li0.className = "li_on";
+    nav_li1.className = "about_li";
+    nav_li2.className = "about_li";
+    nav_li3.className = "about_li";
+  }
+  if ("li"+[k]=="li1") {
+    nav_li1.className = "li_on";
+    nav_li0.className = "about_li";
+    nav_li2.className = "about_li";
+    nav_li3.className = "about_li";
+  }
+  if ("li"+[k]=="li2") {
+    nav_li2.className = "li_on";
+    nav_li1.className = "about_li";
+    nav_li0.className = "about_li";
+    nav_li3.className = "about_li";
+  }
+  if ("li"+[k]=="li3") {
+    nav_li3.className = "li_on";
+    nav_li1.className = "about_li";
+    nav_li2.className = "about_li";
+    nav_li0.className = "about_li";
+  }
+  m = k;
 }
+
+function revi(revie){
+  descr_text = document.getElementById('description_text');
+  
+}
+
 
 //Якорь, треба буде переробити, element.scrollIntoView({ behavior: 'smooth' }) - про це почитати потім

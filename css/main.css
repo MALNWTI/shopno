@@ -238,8 +238,10 @@ font-family: 'Montserrat', sans-serif;
 .about_li{
   display: inline-block;
   color:#d0d0d0;
+  cursor: pointer;
 }
 .li_on{
+  cursor:pointer;
   display: inline-block;
   color:#71f6eb;
 }
@@ -604,11 +606,13 @@ font-family: 'Montserrat', sans-serif;
   background-color: #ffffff;
   opacity: 0.7;
   margin-left: 15px;
+  cursor: pointer;
 }
 .errow_of:hover{
   background-color: #71f6eb;
 }
 .errow_on{
+  cursor: pointer;
   display: block;
   padding: 10px 14px;
   box-shadow: 2px 6px 11px rgba(20, 20, 21, 0.1);
