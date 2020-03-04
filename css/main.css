@@ -6,6 +6,7 @@ font-family: 'Raleway', sans-serif;
 *{
   margin: 0px;
   padding: 0px;
+  transition-duration: 2s;
 }
 li{
   list-style:none;
